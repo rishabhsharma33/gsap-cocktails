@@ -10,7 +10,8 @@ const App = () => {
     <main>
       <Navbar />
       <Hero />
-      <div className="h-dvh bg-black"></div>
+      {/* For scrolling purpose for testing */}
+      {/* <div className="h-dvh bg-black"></div> */}
     </main>
   );
 };
