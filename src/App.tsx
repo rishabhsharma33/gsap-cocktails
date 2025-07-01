@@ -7,10 +7,18 @@ import About from "./components/About";
 import Art from "./components/Art";
 import Menu from "./components/Menu";
 import Contact from "./components/Contact";
+import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const App = () => {
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main>
       <Navbar />
